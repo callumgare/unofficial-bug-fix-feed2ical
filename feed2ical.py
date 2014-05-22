@@ -89,9 +89,9 @@ class Convert(webapp.RequestHandler):
 							else:
 								datEndDate = (datPubDate + timedelta(hours=1))						
 
-						if entry['all_day']:
-							stfmt = "%Y%m%d"
-						else:
+#						if entry['all_day']:
+#							stfmt = "%Y%m%d"
+#						else:
 							stfmt = "%Y%m%dT%H%M%SZ"
 						entry.start_ical = datStartDate.strftime(stfmt)
 						entry.end_ical = datEndDate.strftime(stfmt)						
